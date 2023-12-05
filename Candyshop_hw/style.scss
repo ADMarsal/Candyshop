@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior:smooth;
+}
+
+// body {
+//     // background-image: url(../img/i.png);
+//     // background-image: url(/src/img/photo.jpg);
+//     background-repeat: no-repeat; /* Не повторяем */
+//     background-size: cover; /* Размер фона */
+//     // background-position: center; /* Позиция картинкипо центру */
+// }
+
+.container {
+    width: 1080px;
+    display: block;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    background-color: rgb(196, 7, 186);
+    width: 100%;
+    height: 50px;
+    z-index: 100000;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        img{
+            margin-top: 5px;
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+        }
+    }
+    .nav {
+        width: 300px;
+        height: 50px;
+        &-mini {
+            width: 50px;
+        }
+        &__list {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+
+            .list {
+                border-radius: 4px;
+                span {
+                   font-size: 900; 
+                }
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+                cursor: pointer;
+                position: relative;
+                transition: .5s all;
+                // &::after {
+                // content: '';
+                // display: block;
+                // height: 2px;
+                // background-color: black;
+                // position: absolute;
+                // bottom: 0;
+                // width: 0%;
+                // transition: 0.5s all;
+
+                // }
+                &:hover{
+                   background-color:rgb(224, 94, 207)
+                }
+                &-active {
+                    background-color:rgb(224, 94, 207)
+                }
+            }
+        }
+    }
+}
+
+.logo {
+    // img {
+    //     display: block;
+    //     margin: 0 auto;
+    //     border-radius: 16px;
+    //     width: 100%;
+    //     min-height: 95vh;
+    //     padding-top: 50px;
+    // }
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/main.jpg);
+    background-repeat: no-repeat; /* Не повторяем */
+    background-size: cover; /* Размер фона */
+    background-position: center; /* Позиция картинкипо центру */
+}
+
+.shop {
+    background-color: rgb(204, 76, 198);
+    &-wrapper {
+        padding-bottom: 50px;
+        padding-top: 150px;
+    }
+    &__title {
+        text-align: center;
+        font-size: 36px;
+    }
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &__card {
+        margin-top: 50px;
+        &-wrapper {
+            padding: 10px;
+        }
+        width: 350px;
+        border: 2px solid black;
+        border-radius: 16px;
+        &-photo {
+            img {
+                max-height: 300px;
+                width: 100%;
+                border-radius: 16px;
+                transition: 1s all;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        &-title {
+            text-align: center;
+            margin-top: 10px;
+        }
+        &-descr {
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}
+
+.order {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    &__title{
+        h2 {
+            font-size: 36px;
+            text-align: center;
+        }
+        h3{
+            font-size: 24px;
+            text-align: center;
+            a{
+                color: rgb(255, 53, 53);
+                text-decoration: none;
+            }
+        }
+    }
+    &__form {
+        width: 500px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        &-list{
+            display: block;
+            margin: 10px auto;
+        }
+        &-select {
+            margin-top: 25px;
+            display: block;
+            text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        &-radio {
+            display: flex;
+            margin-top: 50px;
+            // margin: 50 auto;
+            justify-content: space-around;
+            width: 530px;
+            height: 100px;
+            // flex-wrap: wrap;
+            &__SEXY {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &__CARS {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+        &-btn {
+            margin: 50px auto 0 auto;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            height: 35px;
+            width: 25%;
+            background-color: rgb(251, 0, 138);
+            border: 2px solid rgb(251, 0, 138);
+            box-shadow: 1px 1px 50px rgb(251, 0, 138);
+            transition: 1s all;
+            // &::before {
+            //     content: '';           
+            //     position: absolute;
+            //     border-top: 1px solid black;
+            //     border-left: 1px solid black;
+            //     top: -0.5px;
+            //     left: -0.5px;
+            //     width: 10px;
+            //     height: 10px;
+            //     transition: 1s all;
+            // }
+            // &::after {
+            //     content: '';           
+            //     position: absolute;
+            //     border-bottom: 1px solid black;
+            //     border-right: 1px solid black;
+            //     bottom: -0.5px;
+            //     right: -0.5px;
+            //     width: 10px;
+            //     height: 10px;
+            //     transition: 1s all;
+            // }
+            &:hover {
+                background-color: rgb(249, 107, 185);
+                border: 2px solid rgb(251, 0, 138);
+                box-shadow: 1px 1px 50px rgb(145, 0, 80);
+                transform: scale(1.1);
+            }
+            // &:hover::before {
+            //     width: 100%;
+            //     height: 100%;
+            //     border-color: white;
+            // }
+            // &:hover::after {
+            //     width: 100%;
+            //     height: 100%;
+            //     border-color: white;
+            // }
+        }
+
+    }
+}
